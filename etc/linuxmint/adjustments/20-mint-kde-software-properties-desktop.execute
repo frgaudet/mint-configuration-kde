@@ -1,0 +1,4 @@
+#!/bin/bash
+if [ -e "/usr/share/applications/software-properties.desktop" ]; then
+    sed -i "s/applications-other/software-properties-mint/" /usr/share/applications/software-properties.desktop
+fi

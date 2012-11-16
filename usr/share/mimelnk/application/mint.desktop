@@ -1,0 +1,8 @@
+[Desktop Entry]
+Comment=mint install file
+Hidden=false
+Icon=application-x-mint
+MimeType=application/mint
+Patterns=*.mint
+Type=MimeType
+X-KDE-AutoEmbed=false

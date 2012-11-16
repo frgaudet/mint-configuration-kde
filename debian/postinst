@@ -1,0 +1,162 @@
+#!/bin/sh
+# postinst script 
+# see: dh_installdeb(1)
+
+set -e
+
+# summary of how this script can be called:
+#        * <postinst> `configure' <most-recently-configured-version>
+#        * <old-postinst> `abort-upgrade' <new version>
+#        * <conflictor's-postinst> `abort-remove' `in-favour' <package>
+#          <new-version>
+#        * <deconfigured's-postinst> `abort-deconfigure' `in-favour'
+#          <failed-install-package> <version> `removing'
+#          <conflicting-package> <version>
+# for details, see http://www.debian.org/doc/debian-policy/ or
+# the debian-policy package
+#
+
+
+# Set keyboard clt-alt-backspace to restart X.
+#setxkbmap -option terminate:ctrl_alt_bksp
+
+# copy the adjustments to their correct locations.
+# Users default .bashrc file.
+cp /usr/lib/linuxmint/mintSystem/adjustments/kde/.bashrc /etc/skel/.bashrc
+cp /usr/lib/linuxmint/mintSystem/adjustments/kde/bash.bashrc /etc/bash.bashrc
+
+# krestore migrator.
+if [ -e /usr/share/kde4/config/kres-migratorrc ]
+then
+  cp /usr/lib/linuxmint/mintSystem/adjustments/kde/kres-migratorrc /usr/share/kde4/config/kres-migratorrc
+fi
+
+# Mint KDE kde4rc.
+if [ -e /etc/kde4rc ]
+then
+  cp /usr/lib/linuxmint/mintSystem/adjustments/kde/kde4rc /etc/kde4rc
+fi
+
+# wine-browsedrive.desktop replaced.
+if [ -e /usr/share/applications/wine-browsedrive.desktop ]
+then
+  cp /usr/lib/linuxmint/mintSystem/adjustments/kde/wine-browsedrive.desktop /usr/share/applications/wine-browsedrive.desktop
+fi
+
+# Users default directories.
+if [ -e /etc/xdg/user-dirs.defaults ]
+then
+  cp /usr/lib/linuxmint/mintSystem/adjustments/kde/user-dirs.defaults /etc/xdg/user-dirs.defaults
+fi
+
+# Linux Mint quassel default chat channels.
+if [ -e /usr/share/kde4/apps/quassel/networks.ini ]
+then
+  cp /usr/lib/linuxmint/mintSystem/adjustments/kde/networks.ini /usr/share/kde4/apps/quassel/networks.ini
+fi
+
+# Copy the newer inxi version into quassel.
+if [ -e /usr/bin/inxi ] && [ -d /usr/share/kde4/apps/quassel/scripts/ ]
+then
+  cp /usr/bin/inxi /usr/share/kde4/apps/quassel/scripts/inxi
+fi
+
+# Mint KDE version of startkde.
+if [ -e /usr/bin/startkde ]
+then
+  cp /usr/lib/linuxmint/mintSystem/adjustments/kde/startkde /usr/bin/startkde
+fi
+
+
+# Add the gnome default applications list.
+mkdir -p /etc/gnome
+cp /usr/lib/linuxmint/mintSystem/adjustments/kde/defaults.list /etc/gnome/defaults.list
+
+# Set the Linuxmint KDM default options
+if [ -e /etc/kde4/kdm/kdmrc ]
+ then
+	  sed  \
+	      -e "s@^UserList=.*@UserList=true@" \
+	      -e "s@^FaceSource=.*@FaceSource=PreferAdmin@" \
+	      /etc/kde4/kdm/kdmrc
+fi
+
+# Change the software-properties icon 
+if [ -e "/usr/share/applications/software-properties-kde.desktop" ]; then
+    sed -i "s/applications-other/software-properties-mint/" /usr/share/applications/software-properties-kde.desktop
+fi
+
+# copy the software-properties icon to hicolor theme.
+cp -f /usr/share/mintkde-default-settings/kde4-profile/default/share/icons/oxygen/32x32/apps/software-properties-mint.png /usr/share/icons/hicolor/32x32/apps/
+cp -f /usr/share/mintkde-default-settings/kde4-profile/default/share/icons/oxygen/48x48/apps/software-properties-mint.png /usr/share/icons/hicolor/48x48/apps/
+cp -f /usr/share/mintkde-default-settings/kde4-profile/default/share/icons/oxygen/64x64/apps/software-properties-mint.png /usr/share/icons/hicolor/64x64/apps/
+cp -f /usr/share/mintkde-default-settings/kde4-profile/default/share/icons/oxygen/128x128/apps/software-properties-mint.png /usr/share/icons/hicolor/128x128/apps/
+
+# Set the gconf show_fortunes bool to true.
+if [ -x "/usr/bin/gconftool-2" ]
+then
+  gconftool-2 --direct --config-source xml:readwrite:/etc/gconf/gconf.xml.defaults --type bool --set /desktop/linuxmint/terminal/show_fortunes true
+fi
+
+# root user changes.
+
+if [ -e /etc/skel/.bashrc ]
+then
+  cp /etc/skel/.bashrc /root/.bashrc
+fi
+
+# amdcccle
+
+if [ -e /usr/share/fglrx/amdccclesu.desktop ]
+then
+  cp /usr/lib/linuxmint/mintSystem/adjustments/kde/amdccclesu.desktop /usr/share/fglrx/amdccclesu.desktop
+fi
+
+
+# Make gtk apps use KDE themeing when opened as the root user.
+
+if [ ! -e /root/.gtkrc-2.0 ]
+then
+  cp /usr/share/mintkde-default-settings/dot-gtkrc-2.0-kde4 /root/.gtkrc-2.0
+fi
+if [ ! -e /root/.config/gtk-3.0/settings.ini ]
+then
+  mkdir -p /root/.config/gtk-3.0
+  cp /usr/share/mintkde-default-settings/settings.ini /root/.config/gtk-3.0/settings.ini
+fi
+
+# Remove the activity icon
+if [ -e /usr/share/kde4/apps/plasma-desktop/updates/addShowActivitiesManagerPlasmoid.js ]
+then
+  cp /usr/lib/linuxmint/mintSystem/adjustments/kde/addShowActivitiesManagerPlasmoid.js /usr/share/kde4/apps/plasma-desktop/updates/addShowActivitiesManagerPlasmoid.js
+fi
+
+if [ -e /usr/share/applications/gnome-mplayer.desktop ]
+then
+  cp /usr/lib/linuxmint/mintSystem/adjustments/kde/gnome-mplayer.desktop /usr/share/applications/gnome-mplayer.desktop
+fi
+
+case "$1" in
+    configure)
+	update-rc.d mintsystem start 51 S .
+    ;;
+    abort-upgrade|abort-remove|abort-deconfigure)
+
+    ;;
+    triggered)
+	/usr/lib/linuxmint/mintSystem/mint-adjust.py
+    ;;
+    *)
+        echo "postinst called with unknown argument \`$1'" >&2
+        exit 1
+    ;;
+esac
+
+# dh_installdeb will replace this with shell code automatically
+# generated by other debhelper scripts.
+
+#DEBHELPER#
+
+exit 0
+
+

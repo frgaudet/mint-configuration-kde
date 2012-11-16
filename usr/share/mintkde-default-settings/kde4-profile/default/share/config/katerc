@@ -1,0 +1,14 @@
+[TipOfDay]
+RunOnStart=false
+
+[General]
+Session Exit=discard
+Startup Session=new
+
+[Kate View Defaults]
+Dynamic Word Wrap=true
+Tab Handling=2
+Tab Width=4
+
+[Kate Document Defaults]
+Backup Config Flags=0

@@ -1,0 +1,15 @@
+[Desktop Entry]
+Type=Application
+Exec=kdesudo konsole
+Icon=utilities-terminal
+X-DocPath=konsole/index.html
+Terminal=false
+X-KDE-StartupNotify=true
+
+Name=Konsole as root
+
+GenericName=root Terminal
+X-DBUS-StartupType=Unique
+X-KDE-AuthorizeAction=shell_access
+Categories=Qt;KDE;System;TerminalEmulator;
+X-Ubuntu-Gettext-Domain=desktop_kdebase

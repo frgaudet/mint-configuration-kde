@@ -1,0 +1,7 @@
+[Desktop Entry]
+Exec=/usr/lib/linuxmint/mintInstall/mintInstall.py
+InitialPreference=1
+MimeType=application/mint
+Name=mintInstall.py
+Terminal=False
+Type=Application

@@ -1,0 +1,39 @@
+[General]
+BrowserApplication[$e]=firefox.desktop
+
+[PreviewSettings]
+UseFileThumbnails=true
+
+[Toolbar style]
+ToolButtonStyle=TextBesideIcon
+
+[Emoticons]
+emoticonsTheme=Oxygen
+
+[Notification Messages]
+:confirmNewSession=false
+
+[General]
+ColorScheme=Oxygen Cold
+XftHintStyle=hintmedium
+font=Ubuntu,9,-1,5,50,0,0,0,0,0
+menuFont=Ubuntu,9,-1,5,50,0,0,0,0,0
+desktopFont=Ubuntu,9,-1,5,50,0,0,0,0,0
+toolBarFont=Ubuntu,8,-1,5,50,0,0,0,0,0
+smallestReadableFont=Ubuntu,8,-1,5,50,0,0,0,0,0
+taskbarFont=Ubuntu,9,-1,5,50,0,0,0,0,0
+
+[Icons]
+Theme=oxymentary
+
+
+[WM]
+activeFont=Ubuntu,9,-1,5,50,0,0,0,0,0
+
+[KDE]
+ShowDeleteCommand=true
+SingleClick=false
+
+[PreviewSettings]
+MaximumRemoteSize=52428800
+MaximumSize=524288000
