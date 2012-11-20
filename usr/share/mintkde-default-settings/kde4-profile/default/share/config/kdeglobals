@@ -14,21 +14,22 @@ emoticonsTheme=Oxygen
 :confirmNewSession=false
 
 [General]
-ColorScheme=Oxygen Cold
-XftHintStyle=hintmedium
-font=Ubuntu,9,-1,5,50,0,0,0,0,0
-menuFont=Ubuntu,9,-1,5,50,0,0,0,0,0
-desktopFont=Ubuntu,9,-1,5,50,0,0,0,0,0
-toolBarFont=Ubuntu,8,-1,5,50,0,0,0,0,0
-smallestReadableFont=Ubuntu,8,-1,5,50,0,0,0,0,0
-taskbarFont=Ubuntu,9,-1,5,50,0,0,0,0,0
+ColorScheme=Oxygen
+desktopFont=DejaVu Sans,9,-1,5,50,0,0,0,0,0
+fixed=Monospace,9,-1,5,50,0,0,0,0,0
+font=DejaVu Sans,9,-1,5,50,0,0,0,0,0
+menuFont=DejaVu Sans,9,-1,5,50,0,0,0,0,0
+desktopFont=DejaVu Sans,9,-1,5,50,0,0,0,0,0
+toolBarFont=DejaVu Sans,8,-1,5,50,0,0,0,0,0
+smallestReadableFont=DejaVu Sans,8,-1,5,50,0,0,0,0,0
+taskbarFont=DejaVu Sans,9,-1,5,50,0,0,0,0,0
 
 [Icons]
 Theme=oxymentary
 
 
 [WM]
-activeFont=Ubuntu,9,-1,5,50,0,0,0,0,0
+activeFont=DejaVu Sans,9,-1,5,50,0,0,0,0,0
 
 [KDE]
 ShowDeleteCommand=true
