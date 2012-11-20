@@ -75,9 +75,9 @@ cp /usr/lib/linuxmint/mintSystem/adjustments/kde/defaults.list /etc/gnome/defaul
 # Set the Linuxmint KDM default options
 if [ -e /etc/kde4/kdm/kdmrc ]
  then
-	  sed  \
-	      -e "s@^UserList=.*@UserList=true@" \
-	      -e "s@^FaceSource=.*@FaceSource=PreferAdmin@" \
+	  sed -i \
+	      -e "s@^UserList=.*\|^#UserList=.*@UserList=true@" \
+	      -e "s@^FaceSource=.*\|^#FaceSource=.*@FaceSource=PreferAdmin@"\
 	      /etc/kde4/kdm/kdmrc
 fi
 
