@@ -83,10 +83,10 @@ fi
 
 # Change the software-properties icon 
 if [ -e "/usr/share/applications/software-properties-kde.desktop" ]; then
-    sed -i "s/software-properties/software-properties-mint/" /usr/share/applications/software-properties-kde.desktop
+    sed -i "s/Icon=software-properties$/Icon=software-properties-mint/" /usr/share/applications/software-properties-kde.desktop
 fi
 if [ -e "/usr/share/applications/software-properties-gtk.desktop" ]; then
-    sed -i "s/software-properties/software-properties-mint/" /usr/share/applications/software-properties-gtk.desktop
+    sed -i "s/Icon=software-properties$/Icon=software-properties-mint/" /usr/share/applications/software-properties-gtk.desktop
 fi
 # copy the software-properties icon to hicolor theme.
 cp -f /usr/share/mintkde-default-settings/kde4-profile/default/share/icons/oxygen/32x32/apps/software-properties-mint.png /usr/share/icons/hicolor/32x32/apps/
@@ -120,12 +120,27 @@ fi
 if [ ! -e /root/.gtkrc-2.0 ]
 then
   cp /usr/share/mintkde-default-settings/dot-gtkrc-2.0-kde4 /root/.gtkrc-2.0
+  cp /usr/share/mintkde-default-settings/dot-gtkrc-2.0-kde4 /root/.gtkrc-2.0-kde4
 fi
 if [ ! -e /root/.config/gtk-3.0/settings.ini ]
 then
   mkdir -p /root/.config/gtk-3.0
   cp /usr/share/mintkde-default-settings/settings.ini /root/.config/gtk-3.0/settings.ini
 fi
+
+# Same for users
+
+if [ ! -e /etc/skel/.gtkrc-2.0 ]
+then
+  cp /usr/share/mintkde-default-settings/dot-gtkrc-2.0-kde4 /etc/skel/.gtkrc-2.0
+  cp /usr/share/mintkde-default-settings/dot-gtkrc-2.0-kde4 /etc/skel/.gtkrc-2.0-kde4
+fi
+if [ ! -e /etc/skel/.config/gtk-3.0/settings.ini ]
+then
+  mkdir -p /etc/skel/.config/gtk-3.0
+  cp /usr/share/mintkde-default-settings/settings.ini /etc/skel/.config/gtk-3.0/settings.ini
+fi
+
 
 # Remove the activity icon
 if [ -e /usr/share/kde4/apps/plasma-desktop/updates/addShowActivitiesManagerPlasmoid.js ]
