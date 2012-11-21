@@ -3,10 +3,10 @@ First run=false
 
 [GPG Settings]
 Groups=
-gpg_config_path=$HOME/.gnupg/options
+gpg_config_path=$HOME/.gnupg/gpg.conf
 
 [Servers]
-Server_List=hkp://keyserver.ubuntu.com (Default),hkp://wwwkeys.eu.pgp.net,hkp://search.keyserver.net,hkp://wweys.pgp.net,hkp://pgp.dtype.org,hkp://wwwkeys.us.pgp.net
+Server_List=hkp://pgp.mit.edu (Default),hkp://wwwkeys.eu.pgp.net,hkp://search.keyserver.net,hkp://wweys.pgp.net,hkp://pgp.dtype.org,hkp://wwwkeys.us.pgp.net
 
 [TipOfDay]
 RunOnStart=false

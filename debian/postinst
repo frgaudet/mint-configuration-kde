@@ -83,9 +83,11 @@ fi
 
 # Change the software-properties icon 
 if [ -e "/usr/share/applications/software-properties-kde.desktop" ]; then
-    sed -i "s/applications-other/software-properties-mint/" /usr/share/applications/software-properties-kde.desktop
+    sed -i "s/software-properties/software-properties-mint/" /usr/share/applications/software-properties-kde.desktop
 fi
-
+if [ -e "/usr/share/applications/software-properties-gtk.desktop" ]; then
+    sed -i "s/software-properties/software-properties-mint/" /usr/share/applications/software-properties-gtk.desktop
+fi
 # copy the software-properties icon to hicolor theme.
 cp -f /usr/share/mintkde-default-settings/kde4-profile/default/share/icons/oxygen/32x32/apps/software-properties-mint.png /usr/share/icons/hicolor/32x32/apps/
 cp -f /usr/share/mintkde-default-settings/kde4-profile/default/share/icons/oxygen/48x48/apps/software-properties-mint.png /usr/share/icons/hicolor/48x48/apps/
