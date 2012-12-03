@@ -114,6 +114,12 @@ then
   cp /usr/lib/linuxmint/mintSystem/adjustments/kde/amdccclesu.desktop /usr/share/fglrx/amdccclesu.desktop
 fi
 
+# Kppp
+if [ -e /usr/share/applications/kde4/Kppp.desktop ]
+then
+  sed -i "s@Exec=kppp@Exec=kdesudo -i /usr/share/linuxmint/logo.png --comment \"Please enter your password\" kppp@" /usr/share/applications/kde4/Kppp.desktop
+fi
+
 
 # Make gtk apps use KDE themeing when opened as the root user.
 
