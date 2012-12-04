@@ -2,3 +2,4 @@
 /usr/lib/linuxmint/mintSystem/adjustments/kde/user-dirs-defaults /etc/xdg/user-dirs-defaults
 /usr/lib/linuxmint/mintSystem/adjustments/kde/.bashrc /etc/base-files/dot.bashrc
 /usr/lib/linuxmint/mintSystem/adjustments/kde/layout.js /usr/share/kde4/apps/plasma/layout-templates/org.kde.plasma-desktop.defaultPanel/contents/layout.js
+/usr/lib/linuxmint/mintSystem/adjustments/kde/logo.png /usr/share/linuxmint/logo.png
