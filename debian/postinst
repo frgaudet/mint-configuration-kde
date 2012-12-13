@@ -94,6 +94,29 @@ cp -f /usr/share/mintkde-default-settings/kde4-profile/default/share/icons/oxyge
 cp -f /usr/share/mintkde-default-settings/kde4-profile/default/share/icons/oxygen/64x64/apps/software-properties-mint.png /usr/share/icons/hicolor/64x64/apps/
 cp -f /usr/share/mintkde-default-settings/kde4-profile/default/share/icons/oxygen/128x128/apps/software-properties-mint.png /usr/share/icons/hicolor/128x128/apps/
 
+
+# Hide kipi plugins tools
+if [ -e "/usr/share/applications/kde4/dngconverter.desktop" ]; then
+    sed -i "s/NoDisplay=false/NoDisplay=true/" /usr/share/applications/kde4/dngconverter.desktop
+fi
+
+if [ -e "/usr/share/applications/kde4/expoblending.desktop" ]; then
+    sed -i "s/NoDisplay=false/NoDisplay=true/" /usr/share/applications/kde4/expoblending.desktop
+fi
+
+if [ -e "/usr/share/applications/kde4/panoramagui.desktop" ]; then
+    sed -i "s/NoDisplay=false/NoDisplay=true/" /usr/share/applications/kde4/panoramagui.desktop
+fi
+
+if [ -e "/usr/share/applications/kde4/photolayoutseditor.desktop" ]; then
+    sed -i "s/NoDisplay=false/NoDisplay=true/" /usr/share/applications/kde4/photolayoutseditor.desktop
+fi
+
+if [ -e "/usr/share/applications/kde4/scangui.desktop" ]; then
+    sed -i "s/NoDisplay=false/NoDisplay=true/" /usr/share/applications/kde4/scangui.desktop
+fi
+
+
 # Set the gconf show_fortunes bool to true.
 if [ -x "/usr/bin/gconftool-2" ]
 then

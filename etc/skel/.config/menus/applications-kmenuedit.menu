@@ -159,6 +159,14 @@
  </Menu>
  <Menu>
   <Name>Graphics</Name>
+  <Exclude>
+   <Filename>kde4-okular.desktop</Filename>
+   <Filename>kde4-scangui.desktop</Filename>
+   <Filename>kde4-dngconverter.desktop</Filename>
+   <Filename>kde4-expoblending.desktop</Filename>
+   <Filename>kde4-panoramagui.desktop</Filename>
+   <Filename>kde4-photolayoutseditor.desktop</Filename>
+  </Exclude>
   <Layout>
    <Merge type="files"/>
    <Filename>kde4-digikam.desktop</Filename>
@@ -171,9 +179,25 @@
    <Merge type="menus"/>
    <Menuname>More</Menuname>
   </Layout>
-  <Exclude>
-   <Filename>kde4-okular.desktop</Filename>
-  </Exclude>
+  <Menu>
+   <Name>More</Name>
+   <Layout>
+    <Merge type="files"/>
+    <Filename>kde4-scangui.desktop</Filename>
+    <Filename>kde4-dngconverter.desktop</Filename>
+    <Filename>kde4-expoblending.desktop</Filename>
+    <Filename>kde4-panoramagui.desktop</Filename>
+    <Filename>kde4-photolayoutseditor.desktop</Filename>
+   </Layout>
+   <Include>
+    <Filename>kde4-scangui.desktop</Filename>
+    <Filename>kde4-dngconverter.desktop</Filename>
+    <Filename>kde4-expoblending.desktop</Filename>
+    <Filename>kde4-panoramagui.desktop</Filename>
+    <Filename>kde4-photolayoutseditor.desktop</Filename>
+   </Include>
+  </Menu>
+  <Include/>
  </Menu>
  <Menu>
   <Name>Internet</Name>
