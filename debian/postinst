@@ -95,26 +95,52 @@ cp -f /usr/share/mintkde-default-settings/kde4-profile/default/share/icons/oxyge
 cp -f /usr/share/mintkde-default-settings/kde4-profile/default/share/icons/oxygen/128x128/apps/software-properties-mint.png /usr/share/icons/hicolor/128x128/apps/
 
 
-# Hide kipi plugins tools
-if [ -e "/usr/share/applications/kde4/dngconverter.desktop" ]; then
-    sed -i "s/NoDisplay=false/NoDisplay=true/" /usr/share/applications/kde4/dngconverter.desktop
+# Hide kipi plugins tools by default
+FILE="/usr/share/applications/kde4/dngconverter.desktop"
+if [ -e $FILE ]; then
+  if grep -q ^NoDisplay= $FILE; then
+    sed -i -e '/^\[Desktop Entry\]/,/(\[.*|$)/ s,^NoDisplay=.*,NoDisplay=true,' $FILE
+  else
+    sed -i -e '/^\[Desktop Entry\]/a NoDisplay=true' $FILE
+    fi
 fi
 
-if [ -e "/usr/share/applications/kde4/expoblending.desktop" ]; then
-    sed -i "s/NoDisplay=false/NoDisplay=true/" /usr/share/applications/kde4/expoblending.desktop
+FILE="/usr/share/applications/kde4/expoblending.desktop"
+if [ -e $FILE ]; then
+  if grep -q ^NoDisplay= $FILE; then
+    sed -i -e '/^\[Desktop Entry\]/,/(\[.*|$)/ s,^NoDisplay=.*,NoDisplay=true,' $FILE
+  else
+    sed -i -e '/^\[Desktop Entry\]/a NoDisplay=true' $FILE
+    fi
 fi
 
-if [ -e "/usr/share/applications/kde4/panoramagui.desktop" ]; then
-    sed -i "s/NoDisplay=false/NoDisplay=true/" /usr/share/applications/kde4/panoramagui.desktop
+FILE="/usr/share/applications/kde4/panoramagui.desktop" 
+if [ -e $FILE ]; then
+  if grep -q ^NoDisplay= $FILE; then
+    sed -i -e '/^\[Desktop Entry\]/,/(\[.*|$)/ s,^NoDisplay=.*,NoDisplay=true,' $FILE
+  else
+    sed -i -e '/^\[Desktop Entry\]/a NoDisplay=true' $FILE
+    fi
 fi
 
-if [ -e "/usr/share/applications/kde4/photolayoutseditor.desktop" ]; then
-    sed -i "s/NoDisplay=false/NoDisplay=true/" /usr/share/applications/kde4/photolayoutseditor.desktop
+FILE="/usr/share/applications/kde4/photolayoutseditor.desktop"
+if [ -e $FILE ]; then
+  if grep -q ^NoDisplay= $FILE; then
+    sed -i -e '/^\[Desktop Entry\]/,/(\[.*|$)/ s,^NoDisplay=.*,NoDisplay=true,' $FILE
+  else
+    sed -i -e '/^\[Desktop Entry\]/a NoDisplay=true' $FILE
+    fi
 fi
 
-if [ -e "/usr/share/applications/kde4/scangui.desktop" ]; then
-    sed -i "s/NoDisplay=false/NoDisplay=true/" /usr/share/applications/kde4/scangui.desktop
+FILE="/usr/share/applications/kde4/scangui.desktop" 
+if [ -e $FILE ]; then
+  if grep -q ^NoDisplay= $FILE; then
+    sed -i -e '/^\[Desktop Entry\]/,/(\[.*|$)/ s,^NoDisplay=.*,NoDisplay=true,' $FILE
+  else
+    sed -i -e '/^\[Desktop Entry\]/a NoDisplay=true' $FILE
+    fi
 fi
+
 
 
 # Set the gconf show_fortunes bool to true.
