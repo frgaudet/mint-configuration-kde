@@ -1,6 +1,7 @@
 mint-configuration-kde (5.0.13) nadia; urgency=low
 
   * Digital Clock font darker
+  * Hide kipi plugin from the menu. Placed in More application submenu otherwise
 
  -- Frédéric Gaudet <fred@linuxmint.com>  Thu, 13 Dec 2012 10:23:30 +0100
 
