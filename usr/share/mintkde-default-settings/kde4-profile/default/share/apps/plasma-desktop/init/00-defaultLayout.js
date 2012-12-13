@@ -37,6 +37,8 @@ systray.writeConfig("plugin", "notifier")
 
 clock = panel.addWidget("digital-clock")
 clock.writeConfig("showDate", "true")
+clock.writeConfig("plainClockColor", "43,41,38")
+clock.writeConfig("useCustomColor", "true")
 
 // icons change.
 for (var i = 0; i < panelIds.length; ++i) {                                           
