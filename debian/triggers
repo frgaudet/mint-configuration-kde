@@ -13,3 +13,5 @@ interest /usr/share/applications/kde4/expoblending.desktop
 interest /usr/share/applications/kde4/panoramagui.desktop
 interest /usr/share/applications/kde4/photolayoutseditor.desktop
 interest /usr/share/applications/kde4/scangui.desktop
+interest /usr/share/cups/data/default-testpage.pdf 
+
