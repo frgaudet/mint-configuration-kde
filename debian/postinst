@@ -89,7 +89,7 @@ if [ -e "/usr/share/applications/software-properties-gtk.desktop" ]; then
     sed -i "s/Icon=software-properties$/Icon=software-properties-mint/" /usr/share/applications/software-properties-gtk.desktop
 fi
 if [ -e "/usr/share/applications/software-sources.desktop" ]; then
-    sed -i "s@/usr/share/icons/hicolor/scalable/apps/software-sources.svg@Icon=software-properties-mint@" /usr/share/applications/software-sources.desktop
+    sed -i "s@Icon=/usr/share/icons/hicolor/scalable/apps/software-sources.svg@Icon=software-properties-mint@" /usr/share/applications/software-sources.desktop
 fi
 # copy the software-properties icon to hicolor theme.
 cp -f /usr/share/mintkde-default-settings/kde4-profile/default/share/icons/oxygen/32x32/apps/software-properties-mint.png /usr/share/icons/hicolor/32x32/apps/
