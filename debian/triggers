@@ -7,6 +7,7 @@ interest /usr/share/kde4/apps/plasma-desktop/updates/addShowActivitiesManagerPla
 interest /usr/bin/inxi
 interest /usr/share/applications/software-properties-kde.desktop
 interest /usr/share/applications/software-properties-gtk.desktop
+interest /usr/share/applications/software-sources.desktop
 interest /usr/share/applications/kde4/Kppp.desktop
 interest /usr/share/applications/kde4/dngconverter.desktop
 interest /usr/share/applications/kde4/expoblending.desktop
