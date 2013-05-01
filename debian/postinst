@@ -22,14 +22,16 @@ set -e
 
 # copy the adjustments to their correct locations.
 # Users default .bashrc file.
-cp /usr/lib/linuxmint/mintSystem/adjustments/kde/.bashrc /etc/skel/.bashrc
+cp /usr/lib/linuxmint/mintSystem/adjustments/kde/dot.bashrc /etc/skel/.bashrc
 cp /usr/lib/linuxmint/mintSystem/adjustments/kde/bash.bashrc /etc/bash.bashrc
 
-# krestore migrator.
-if [ -e /usr/share/kde4/config/kres-migratorrc ]
+# root user changes.
+
+if [ -d /root ]
 then
-  cp /usr/lib/linuxmint/mintSystem/adjustments/kde/kres-migratorrc /usr/share/kde4/config/kres-migratorrc
+  cp /usr/lib/linuxmint/mintSystem/adjustments/kde/dot.bashrc /root/.bashrc
 fi
+
 
 # Mint KDE kde4rc.
 if [ -e /etc/kde4rc ]
@@ -156,13 +158,6 @@ then
   gconftool-2 --direct --config-source xml:readwrite:/etc/gconf/gconf.xml.defaults --type bool --set /desktop/linuxmint/terminal/show_fortunes true
 fi
 
-# root user changes.
-
-if [ -e /etc/skel/.bashrc ]
-then
-  cp /etc/skel/.bashrc /root/.bashrc
-fi
-
 # amdcccle
 
 if [ -e /usr/share/fglrx/amdccclesu.desktop ]
@@ -189,20 +184,6 @@ then
   mkdir -p /root/.config/gtk-3.0
   cp /usr/share/mintkde-default-settings/settings.ini /root/.config/gtk-3.0/settings.ini
 fi
-
-# Same for users
-
-if [ ! -e /etc/skel/.gtkrc-2.0 ]
-then
-  cp /usr/share/mintkde-default-settings/dot-gtkrc-2.0-kde4 /etc/skel/.gtkrc-2.0
-  cp /usr/share/mintkde-default-settings/dot-gtkrc-2.0-kde4 /etc/skel/.gtkrc-2.0-kde4
-fi
-if [ ! -e /etc/skel/.config/gtk-3.0/settings.ini ]
-then
-  mkdir -p /etc/skel/.config/gtk-3.0
-  cp /usr/share/mintkde-default-settings/settings.ini /etc/skel/.config/gtk-3.0/settings.ini
-fi
-
 
 # Remove the activity icon
 if [ -e /usr/share/kde4/apps/plasma-desktop/updates/addShowActivitiesManagerPlasmoid.js ]
