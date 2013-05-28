@@ -1,3 +1,9 @@
+mint-configuration-kde (5.0.16) olivia; urgency=low
+
+  * Olivia KDE Release
+
+ -- Frédéric Gaudet <fred@linuxmint.com>  Tue, 28 May 2013 13:48:00 +0200
+
 mint-configuration-kde (5.0.15) olivia; urgency=low
 
   * Many fixes
