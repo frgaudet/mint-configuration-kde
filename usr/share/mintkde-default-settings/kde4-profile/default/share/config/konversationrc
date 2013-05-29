@@ -10,7 +10,7 @@ ShowTrayIcon=false
 LogfilePath=~/.kde/share/apps/konversation/logs
 
 [Server 0]
-Server=irc.freenode.net
+Server=irc.spotchat.org
 Port=6667
 
 [ServerGroup 0]
