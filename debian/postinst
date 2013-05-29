@@ -172,11 +172,18 @@ then
 fi
 
 # mdmsetup
-if [ -e /usr/share/applications/mdmsetup.desktop ]
+if [ -e /usr/share/mdm/applications/mdmsetup.desktop ]
 then
   sed -i -e "s@^Exec=gksu@Exec=kdesudo -i /usr/share/linuxmint/logo.png --comment \"Please enter your password\" @" \
          -e "s/^Categories=GNOME.*/Categories=Settings;" \
-         /usr/share/applications/mdmsetup.desktop
+         /usr/share/mdm/applications/mdmsetup.desktop
+fi
+
+# im-config
+if [ -e /usr/share/applications/im-config.desktop ]
+then
+  sed -i -e '/^\[Desktop Entry\]/a NoDisplay=true'  \
+         /usr/share/applications/im-config.desktop
 fi
 
 if [ -e /usr/share/mdm/html-themes/Clouds/img/logo.png ]

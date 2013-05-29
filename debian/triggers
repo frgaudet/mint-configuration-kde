@@ -17,4 +17,5 @@ interest /usr/share/applications/kde4/scangui.desktop
 interest /usr/share/cups/data/default-testpage.pdf
 interest /usr/share/mdm/html-themes/Clouds/img/logo.png
 interest /usr/share/applications/mdmsetup.desktop
+interest /usr/share/applications/im-config.desktop
 
