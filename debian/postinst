@@ -175,7 +175,7 @@ fi
 if [ -e /usr/share/mdm/applications/mdmsetup.desktop ]
 then
   sed -i -e "s@^Exec=gksu@Exec=kdesudo -i /usr/share/linuxmint/logo.png --comment \"Please enter your password\" @" \
-         -e "s/^Categories=GNOME.*/Categories=Settings;" \
+         -e "s@^Categories=GNOME.*@Categories=Settings;@" \
          /usr/share/mdm/applications/mdmsetup.desktop
 fi
 
