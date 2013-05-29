@@ -5,6 +5,7 @@ kdewallet=kwalletmanager
 kdewallet=
 
 [Wallet]
+Silently Create Initial Wallet=true
 Close When Idle=false
 Close on Screensaver=false
 Default Wallet=kdewallet
@@ -14,6 +15,6 @@ Idle Timeout=10
 Launch Manager=false
 Leave Manager Open=false
 Leave Open=true
-Prompt on Open=true
+Prompt on Open=false
 Use One Wallet=true
 
