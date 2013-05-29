@@ -2,4 +2,4 @@
 FavoriteURLs=/usr/share/applications/kde4/amarok.desktop,/usr/share/applications/firefox.desktop,/usr/share/applications/kde4/konsole.desktop,/usr/share/applications/kde4/konversation.desktop,/usr/share/applications/kde4/ktp-contactlist.desktop,/usr/share/applications/mintInstall_kde.desktop,/usr/share/applications/kde4/systemsettings.desktop
 
 [SystemApplications]
-DesktopFiles=/usr/share/applications/mintInstall.desktop,/usr/share/applications/kde4/systemsettings.desktop,/usr/share/applications/synaptic-kde.desktop,/usr/share/applications/kde4/konsole_kdesu.desktop
+DesktopFiles=/usr/share/applications/mintInstall_kde.desktop,/usr/share/applications/kde4/systemsettings.desktop,/usr/share/applications/synaptic-kde.desktop,/usr/share/applications/kde4/konsole_kdesu.desktop
