@@ -171,13 +171,22 @@ then
   sed -i "s@Exec=kppp@Exec=kdesudo -i /usr/share/linuxmint/logo.png --comment \"Please enter your password\" kppp@" /usr/share/applications/kde4/Kppp.desktop
 fi
 
-# mdmsetup
+# Make mdm setup KDE compliant, Hide mdmsetup
 if [ -e /usr/share/mdm/applications/mdmsetup.desktop ]
 then
   sed -i -e "s@^Exec=gksu@Exec=kdesudo -i /usr/share/linuxmint/logo.png --comment \"Please enter your password\" @" \
          -e "s@^Categories=GNOME.*@Categories=Settings;@" \
+         -e "/^\[Desktop Entry\]/a NoDisplay=true"  \
          /usr/share/mdm/applications/mdmsetup.desktop
 fi
+
+# Hide mdmflexiserver
+if [ -e /usr/share/mdm/applications/mdmflexiserver.desktop ]
+then
+  sed -i -e "/^\[Desktop Entry\]/a NoDisplay=true" \
+         /usr/share/mdm/applications/mdmflexiserver.desktop
+fi
+
 
 # im-config
 if [ -e /usr/share/applications/im-config.desktop ]
