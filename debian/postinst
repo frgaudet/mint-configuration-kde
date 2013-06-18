@@ -200,6 +200,12 @@ then
  cp /usr/lib/linuxmint/mintSystem/adjustments/kde/logo-64x64.png /usr/share/mdm/html-themes/Clouds/img/logo.png
 fi
 
+if [ -e /usr/share/mintsources/olivia/icon.png ]
+then
+ cp /usr/lib/linuxmint/mintSystem/adjustments/kde/logo-32x32.png /usr/share/mintsources/olivia/icon.png
+fi
+
+
 # Make gtk apps use KDE themeing when opened as the root user.
 
 if [ ! -e /root/.gtkrc-2.0 ]
