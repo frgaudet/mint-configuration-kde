@@ -243,10 +243,6 @@ then
   cp /usr/lib/linuxmint/mintSystem/adjustments/kde/gnome-mplayer.desktop /usr/share/applications/gnome-mplayer.desktop
 fi
 
-if  [ -e /usr/share/linuxmint/common/artwork/firefox/mimeTypes.rdf ]; then
-  cp /usr/lib/firefox/defaults/profile/mimeTypes.rdf /usr/share/linuxmint/common/artwork/firefox/mimeTypes.rdf
-fi
-
 if [ -e /usr/bin/driver-manager ]; then
   cp /usr/lib/linuxmint/mintSystem/adjustments/kde/driver-manager /usr/bin/driver-manager
 fi
