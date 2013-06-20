@@ -6,7 +6,7 @@ style "user-font"
 font_name="DejaVu Sans"
 }
 widget_class "*" style "user-font"
-gtk-font-name="DejaVu Sans 11"
+gtk-font-name="DejaVu Sans 9"
 gtk-theme-name="oxygen-gtk"
 gtk-icon-theme-name="oxymentary"
 gtk-fallback-icon-theme="gnome"
