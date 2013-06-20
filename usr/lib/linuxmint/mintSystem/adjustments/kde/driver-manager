@@ -1,0 +1,21 @@
+#!/usr/bin/python
+
+import os
+import gettext
+import commands  
+
+# i18n
+gettext.install("mintdrivers", "/usr/share/linuxmint/locale")
+
+tool = "/usr/lib/linuxmint/mintDrivers/mintDrivers.py"
+sentence = _("Please enter your password to launch the driver manager")
+icon = "/usr/share/icons/hicolor/48x48/apps/driver-manager.png"
+
+desktop_environnment = commands.getoutput('/usr/lib/linuxmint/common/env_check.sh')
+launcher = "gksu  --message \"<b>%s</b>\"" % sentence 
+
+if (desktop_environnment == "KDE"):
+    launcher = "kdesudo -i %s -d --comment \"<b>%s</b>\"" % (icon, sentence)
+
+command = "%s %s" % (launcher, tool)
+os.system(command)

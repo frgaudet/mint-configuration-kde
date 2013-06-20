@@ -20,3 +20,10 @@ interest /usr/share/applications/mdmsetup.desktop
 interest /usr/share/applications/im-config.desktop
 interest /usr/share/linuxmint/common/artwork/firefox/mimeTypes.rdf
 interest /usr/share/mintsources/olivia/icon.png
+interest /usr/share/applications/mdmflexiserver.desktop
+interest /usr/share/applications/mintdrivers.desktop
+interest /usr/share/applications/mintsources.desktop
+interest /usr/bin/driver-manager
+interest /usr/bin/software-sources
+
+

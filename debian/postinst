@@ -187,6 +187,19 @@ then
          /usr/share/mdm/applications/mdmflexiserver.desktop
 fi
 
+# Hide Mintdriver
+if [ -e /usr/share/applications/mintdrivers.desktop ]
+then
+  sed -i -e "/^\[Desktop Entry\]/a NoDisplay=true"  \
+         /usr/share/applications/mintdrivers.desktop
+fi
+
+# Hide MintSources
+if [ -e /usr/share/applications/mintsources.desktop ]
+then
+  sed -i -e "/^\[Desktop Entry\]/a NoDisplay=true"  \
+         /usr/share/applications/mintsources.desktop
+fi
 
 # im-config
 if [ -e /usr/share/applications/im-config.desktop ]
@@ -233,6 +246,14 @@ fi
 if  [ -e /usr/share/linuxmint/common/artwork/firefox/mimeTypes.rdf ]; then
   cp /usr/lib/firefox/defaults/profile/mimeTypes.rdf /usr/share/linuxmint/common/artwork/firefox/mimeTypes.rdf
 fi
+
+if [ -e /usr/bin/driver-manager ]; then
+  cp /usr/lib/linuxmint/mintSystem/adjustments/kde/driver-manager /usr/bin/driver-manager
+fi
+
+if [ -e /usr/bin/software-sources ]; then
+  cp /usr/lib/linuxmint/mintSystem/adjustments/kde/software-sources /usr/bin/software-sources
+ fi
 
 case "$1" in
     configure)
