@@ -94,6 +94,13 @@ ForegroundVisited=69,40,134
 [General]
 ColorScheme=Oxygen Cold
 shadeSortColumn=true
+desktopFont=Droid Serif,10,-1,5,50,0,0,0,0,0
+fixed=Monospace,9,-1,5,50,0,0,0,0,0
+font=Droid Serif,10,-1,5,50,0,0,0,0,0
+menuFont=Droid Serif,10,-1,5,50,0,0,0,0,0
+smallestReadableFont=Droid Serif,9,-1,5,50,0,0,0,0,0
+taskbarFont=Droid Serif,10,-1,5,50,0,0,0,0,0
+toolBarFont=Droid Serif,10,-1,5,50,0,0,0,0,0
 
 [KDE]
 contrast=7
@@ -102,6 +109,7 @@ contrast=7
 activeBackground=96,148,207
 activeBlend=255,255,255
 activeForeground=255,255,255
+activeFont=Droid Serif,10,-1,5,75,0,0,0,0,0
 inactiveBackground=224,223,222
 inactiveBlend=75,71,67
 inactiveForeground=20,19,18
