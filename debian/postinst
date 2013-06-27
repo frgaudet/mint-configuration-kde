@@ -218,7 +218,6 @@ then
  cp /usr/lib/linuxmint/mintSystem/adjustments/kde/logo-32x32.png /usr/share/mintsources/olivia/icon.png
 fi
 
-
 # Make gtk apps use KDE themeing when opened as the root user.
 
 if [ ! -e /root/.gtkrc-2.0 ]
@@ -250,6 +249,27 @@ fi
 if [ -e /usr/bin/software-sources ]; then
   cp /usr/lib/linuxmint/mintSystem/adjustments/kde/software-sources /usr/bin/software-sources
  fi
+
+# Hide ktp-log-viewer
+if [ -e /usr/share/applications/kde4/ktp-log-viewer.desktop ]
+then
+  sed -i -e "/^\[Desktop Entry\]/a NoDisplay=true" \
+         /usr/share/applications/kde4/ktp-log-viewer.desktop
+fi
+ 
+ # Hide nepomukcleaner
+if [ -e /usr/share/applications/kde4/nepomukcleaner.desktop ]
+then
+  sed -i -e "/^\[Desktop Entry\]/a NoDisplay=true" \
+         /usr/share/applications/kde4/nepomukcleaner.desktop
+fi
+
+# Make mintnanny setup KDE compliant
+if [ -e /usr/share/applications/mintNanny.desktop ]
+then
+  sed -i -e "s@^Categories=Application.*@Categories=Qt;KDE;Utility;@" \
+         /usr/share/applications/mintNanny.desktop
+fi
 
 case "$1" in
     configure)
