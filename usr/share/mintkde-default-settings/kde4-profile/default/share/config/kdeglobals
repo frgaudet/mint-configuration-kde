@@ -94,13 +94,13 @@ ForegroundVisited=69,40,134
 [General]
 ColorScheme=Oxygen Cold
 shadeSortColumn=true
-desktopFont=Linux Libertine O,11,-1,5,50,0,0,0,0,0
+desktopFont=Liberation Sans,10,-1,5,50,0,0,0,0,0
 fixed=Monospace,9,-1,5,50,0,0,0,0,0
-font=Linux Libertine O,11,-1,5,50,0,0,0,0,0
-menuFont=Linux Libertine O,11,-1,5,50,0,0,0,0,0
-smallestReadableFont=Linux Libertine O,10,-1,5,50,0,0,0,0,0
-taskbarFont=Linux Libertine O,10.5,-1,5,50,0,0,0,0,0
-toolBarFont=Linux Libertine O,11,-1,5,50,0,0,0,0,0
+font=Liberation Sans,10,-1,5,50,0,0,0,0,0
+menuFont=Liberation Sans,10,-1,5,50,0,0,0,0,0
+smallestReadableFont=Liberation Sans,9,-1,5,50,0,0,0,0,0
+taskbarFont=Liberation Sans,10.5,-1,5,50,0,0,0,0,0
+toolBarFont=Liberation Sans,10,-1,5,50,0,0,0,0,0
 
 [KDE]
 contrast=7
@@ -110,7 +110,7 @@ SingleClick=false
 activeBackground=96,148,207
 activeBlend=255,255,255
 activeForeground=255,255,255
-activeFont=Droid Serif,10,-1,5,75,0,0,0,0,0
+activeFont=Droid Sans [unknown],10,-1,5,50,0,0,0,0,0
 inactiveBackground=224,223,222
 inactiveBlend=75,71,67
 inactiveForeground=20,19,18
