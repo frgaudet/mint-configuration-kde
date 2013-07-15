@@ -105,6 +105,7 @@ toolBarFont=Liberation Sans,10,-1,5,50,0,0,0,0,0
 [KDE]
 contrast=7
 SingleClick=false
+ShowDeleteCommand=true
 
 [WM]
 activeBackground=96,148,207

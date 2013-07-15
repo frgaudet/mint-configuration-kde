@@ -1,3 +1,9 @@
+mint-configuration-kde (5.0.18) olivia; urgency=low
+
+  * Add Delete command
+
+ -- Frédéric Gaudet <fred@linuxmint.com>  Mon, 15 Jul 2013 10:14:26 +0200
+
 mint-configuration-kde (5.0.17) olivia; urgency=low
 
   * RC
