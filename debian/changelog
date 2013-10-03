@@ -1,3 +1,9 @@
+mint-configuration-kde (5.0.19) petra; urgency=low
+
+  * Initial Petra Release
+
+ -- Frédéric Gaudet <fred@linuxmint.com>  Wed, 18 Sep 2013 11:39:08 +0200
+
 mint-configuration-kde (5.0.18) olivia; urgency=low
 
   * Add Delete command
