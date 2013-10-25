@@ -7,6 +7,7 @@ if (panelIds.length == 1) {
 panel.height = 32
 launcher = panel.addWidget("launcher")
 launcher.globalShortcut = "Alt+F1"
+panel.addWidget("pager")
 panel.addWidget("showdesktop")
 var widget = panel.addWidget("icon")
 widget.writeConfig("Url", "file:///usr/share/applications/kde4/dolphin.desktop")
@@ -21,7 +22,7 @@ if (hasBattery) {
 systray.currentConfigGroup = new Array("Applets", ++i)
 systray.writeConfig("plugin", "message-indicator")
 systray.currentConfigGroup = new Array("Applets", ++i)
-systray.writeConfig("plugin", "org.kde.networkmanagement")
+systray.writeConfig("plugin", "org.kde.plasma-nm")
 systray.currentConfigGroup = new Array("Applets", ++i)
 systray.writeConfig("plugin", "notifier")
 
