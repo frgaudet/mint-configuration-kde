@@ -7,7 +7,6 @@ if (panelIds.length == 1) {
 panel.height = 32
 launcher = panel.addWidget("launcher")
 launcher.globalShortcut = "Alt+F1"
-panel.addWidget("pager")
 panel.addWidget("showdesktop")
 var widget = panel.addWidget("icon")
 widget.writeConfig("Url", "file:///usr/share/applications/kde4/dolphin.desktop")
