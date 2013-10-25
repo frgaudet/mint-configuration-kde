@@ -1,4 +1,2 @@
-[Windeco]
-BlendTitlebarColors=true
-UseOxygenShadows=false
-FrameBorder=Normal
+[ActiveShadow]
+Enabled=false
