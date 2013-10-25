@@ -1,3 +1,9 @@
+mint-configuration-kde (5.0.20) petra; urgency=low
+
+  * Hide GNOME apps
+
+ -- Frédéric Gaudet <fred@linuxmint.com>  Fri, 25 Oct 2013 14:54:03 +0200
+
 mint-configuration-kde (5.0.19) petra; urgency=low
 
   * Initial Petra Release
