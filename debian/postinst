@@ -171,6 +171,13 @@ then
   sed -i "s@Exec=kppp@Exec=kdesudo -i /usr/share/linuxmint/logo.png --comment \"Please enter your password\" kppp@" /usr/share/applications/kde4/Kppp.desktop
 fi
 
+# Make system-settings-samba compliant
+if [ -e /usr/share/applications/system-config-samba.desktop ]
+then
+  sed -i -e "s@^Exec=gksu@Exec=kdesudo -i /usr/share/linuxmint/logo.png --comment \"Please enter your password\" @" \
+         /usr/share/applications/system-config-samba.desktop
+fi
+
 # Make mdm setup KDE compliant, Hide mdmsetup
 if [ -e /usr/share/mdm/applications/mdmsetup.desktop ]
 then
