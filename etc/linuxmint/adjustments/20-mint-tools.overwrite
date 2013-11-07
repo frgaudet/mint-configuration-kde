@@ -1,2 +1,5 @@
 /usr/lib/linuxmint/mintSystem/adjustments/kde/driver-manager /usr/bin/driver-manager
 /usr/lib/linuxmint/mintSystem/adjustments/kde/software-sources /usr/bin/software-sources
+/usr/lib/linuxmint/mintSystem/adjustments/kde/mintnanny /usr/bin/mintnanny
+/usr/lib/linuxmint/mintSystem/adjustments/kde/mintbackup /usr/bin/mintbackup
+/usr/lib/linuxmint/mintSystem/adjustments/kde/mintinstall /usr/bin/mintinstall

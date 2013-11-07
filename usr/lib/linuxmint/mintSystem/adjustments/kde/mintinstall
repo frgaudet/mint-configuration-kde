@@ -1,0 +1,29 @@
+#!/usr/bin/python
+
+import os
+import sys
+import commands 
+import gettext
+
+gettext.install("mintinstall", "/usr/share/linuxmint/locale")
+
+tool = "/usr/lib/linuxmint/mintInstall/mintInstall.py"
+sentence = _("Please enter your password to start the software manager")
+icon = "/usr/lib/linuxmint/mintInstall/icon.svg"
+
+desktop_environnment = commands.getoutput('/usr/lib/linuxmint/common/env_check.sh')
+launcher = "gksu  --message \"<b>%s</b>\"" % sentence 
+
+if (desktop_environnment == "KDE"):
+    launcher = "kdesudo -i %s -d --comment \"<b>%s</b>\"" % (icon, sentence)
+
+if len(sys.argv) > 1:
+	mintfile = sys.argv[1]
+	command = "%s %s %s %s %s" % (launcher, tool, mintfile, os.getenv("USER"), os.getenv("HOME"))
+	os.system(command)
+else:
+	status = 9 # status code 9 is used to restart the app
+	while status == 9:
+		status = int(os.system("/usr/lib/linuxmint/mintInstall/mintinstall.py") / 256) # exit code is upper 8 bits
+		
+
