@@ -98,6 +98,16 @@ cp -f /usr/share/mintkde-default-settings/kde4-profile/default/share/icons/oxyge
 cp -f /usr/share/mintkde-default-settings/kde4-profile/default/share/icons/oxygen/128x128/apps/software-properties-mint.png /usr/share/icons/hicolor/128x128/apps/
 
 
+# Hide samba mounter app tools by default
+FILE="/usr/share/applications/kde4/sambamounterapp.desktop"
+if [ -e $FILE ]; then
+  if grep -q ^NoDisplay= $FILE; then
+    sed -i -e '/^\[Desktop Entry\]/,/(\[.*|$)/ s,^NoDisplay=.*,NoDisplay=true,' $FILE
+  else
+    sed -i -e '/^\[Desktop Entry\]/a NoDisplay=true' $FILE
+    fi
+fi
+
 # Hide kipi plugins tools by default
 FILE="/usr/share/applications/kde4/dngconverter.desktop"
 if [ -e $FILE ]; then
