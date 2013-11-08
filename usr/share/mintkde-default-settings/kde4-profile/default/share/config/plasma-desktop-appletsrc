@@ -1,3 +1,8 @@
+[ActionPlugins]
+MidButton;NoModifier=paste
+RightButton;NoModifier=contextmenu
+wheel:Vertical;NoModifier=switchwindow
+
 [AppletGlobals][plasma_applet_launcher]
 SwitchTabsOnHover=true
 askBeforeRemoval=true
