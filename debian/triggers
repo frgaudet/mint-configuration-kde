@@ -30,3 +30,5 @@ interest /usr/share/applications/mintNanny.desktop
 interest /usr/bin/mintnanny
 interest /usr/bin/mintinstall
 interest /usr/bin/mintbackup
+interest /usr/lib/linuxmint/mintWelcome/templates/style.css
+

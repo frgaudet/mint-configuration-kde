@@ -237,6 +237,12 @@ then
  cp /usr/lib/linuxmint/mintSystem/adjustments/kde/logo-32x32.png /usr/share/mintsources/petra/icon.png
 fi
 
+if [ -e /usr/lib/linuxmint/mintWelcome/templates/style.css ]
+then
+    sed -i -e "s@logo.svg@welcome-logo.png@" \
+        /usr/lib/linuxmint/mintWelcome/templates/style.css
+fi
+
 # Make gtk apps use KDE themeing when opened as the root user.
 
 if [ ! -e /root/.gtkrc-2.0 ]
