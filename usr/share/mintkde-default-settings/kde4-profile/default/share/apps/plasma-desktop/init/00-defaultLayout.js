@@ -2,7 +2,7 @@ var activity = new Activity("desktop")
 activity.wallpaperPlugin = "image"
 activity.wallpaperMode = "SingleImage"
 activity.currentConfigGroup = Array("Wallpaper", "image")
-activity.writeConfig("wallpaper", "/usr/share/wallpapers/Linux_blue_15")
+activity.writeConfig("wallpaper", "/usr/share/wallpapers/Linux_blue_16")
 
 activity.currentConfigGroup = new Array('ToolBox')
 activity.writeConfig('corner', '1')
