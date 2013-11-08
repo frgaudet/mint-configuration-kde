@@ -7,7 +7,6 @@ interest /usr/share/kde4/apps/plasma-desktop/updates/addShowActivitiesManagerPla
 interest /usr/bin/inxi
 interest /usr/share/applications/software-properties-kde.desktop
 interest /usr/share/applications/software-properties-gtk.desktop
-interest /usr/share/applications/mintInstall_kde.desktop
 interest /usr/share/applications/kde4/Kppp.desktop
 interest /usr/share/applications/kde4/dngconverter.desktop
 interest /usr/share/applications/kde4/expoblending.desktop
@@ -28,8 +27,8 @@ interest /usr/bin/software-sources
 interest /usr/share/applications/kde4/ktp-log-viewer.desktop
 interest /usr/share/applications/kde4/nepomukcleaner.desktop
 interest /usr/share/applications/mintNanny.desktop
+interest /usr/share/applications/mintupload.desktop
 interest /usr/bin/mintnanny
 interest /usr/bin/mintinstall
 interest /usr/bin/mintbackup
 interest /usr/lib/linuxmint/mintWelcome/templates/style.css
-

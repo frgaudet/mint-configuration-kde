@@ -296,6 +296,13 @@ then
          /usr/share/applications/mintNanny.desktop
 fi
 
+# Make mintupload setup KDE compliant
+if [ -e /usr/share/applications/mintupload.desktop ]
+then
+  sed -i -e "s@^Categories=Application.*@Categories=Qt;KDE;Utility;@" \
+         /usr/share/applications/mintupload.desktop
+fi
+
 case "$1" in
     configure)
 	update-rc.d mintsystem start 51 S .
