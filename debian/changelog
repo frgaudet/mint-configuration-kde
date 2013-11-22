@@ -1,3 +1,9 @@
+mint-configuration-kde (5.0.21) petra; urgency=low
+
+  * Move default mimeTypes.rdf default location
+
+ -- Frédéric Gaudet <fred@linuxmint.com>  Fri, 22 Nov 2013 13:50:30 +0100
+
 mint-configuration-kde (5.0.20) petra; urgency=low
 
   * Hide GNOME apps
