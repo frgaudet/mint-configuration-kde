@@ -1,15 +1,14 @@
-var activity = new Activity("desktop")
+var activity = new Activity("folderview")
+activity.name = i18n("Desktop")
 activity.wallpaperPlugin = "image"
 activity.wallpaperMode = "SingleImage"
 activity.currentConfigGroup = Array("Wallpaper", "image")
 activity.writeConfig("wallpaper", "/usr/share/wallpapers/Linux_blue_16")
+activity.writeConfig("wallpaperposition", "2")
 
 activity.currentConfigGroup = new Array('ToolBox')
 activity.writeConfig('corner', '1')
 activity.writeConfig('offset', '0')
-	
-folderview = activity.addWidget("folderview")
-folderview.writeConfig("url", "desktop:/")
 
 var screenrect = screenGeometry(0)
 
@@ -37,7 +36,11 @@ systray.writeConfig("plugin", "notifier")
 
 clock = panel.addWidget("digital-clock")
 clock.writeConfig("showDate", "true")
+clock.writeConfig("dateStyle","0")
 clock.writeConfig("plainClockColor", "43,41,38")
+clock.writeConfig("plainClockDrawShadow","true")
+clock.writeConfig("showSeconds","false")
+clock.writeConfig("showTimeZone","false")
 clock.writeConfig("useCustomColor", "true")
 
 // icons change.

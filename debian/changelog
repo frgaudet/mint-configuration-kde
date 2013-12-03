@@ -1,3 +1,10 @@
+mint-configuration-kde (5.0.22) petra; urgency=low
+
+  * Switch to folderview plugin
+	Adjust clock format
+
+ -- Frédéric Gaudet <fred@linuxmint.com>  Tue, 03 Dec 2013 14:29:01 +0100
+
 mint-configuration-kde (5.0.21) petra; urgency=low
 
   * Move default mimeTypes.rdf default location

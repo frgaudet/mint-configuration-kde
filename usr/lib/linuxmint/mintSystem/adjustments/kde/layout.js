@@ -27,7 +27,11 @@ systray.writeConfig("plugin", "notifier")
 
 clock = panel.addWidget("digital-clock")
 clock.writeConfig("showDate", "true")
+clock.writeConfig("dateStyle","0")
 clock.writeConfig("plainClockColor", "43,41,38")
+clock.writeConfig("plainClockDrawShadow","true")
+clock.writeConfig("showSeconds","false")
+clock.writeConfig("showTimeZone","false")
 clock.writeConfig("useCustomColor", "true")
 
 // icons change.
