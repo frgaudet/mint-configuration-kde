@@ -1,3 +1,4 @@
 [General]
+AutoStart=false
 MaxClipItems=10
 URLGrabberEnabled=false

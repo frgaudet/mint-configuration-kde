@@ -1,3 +1,11 @@
+mint-configuration-kde (5.0.23) petra; urgency=low
+
+  * Hide Klipper
+	Always shown notifications
+	Disable bouncing cursor
+
+ -- Frédéric Gaudet <fred@linuxmint.com>  Wed, 04 Dec 2013 10:31:11 +0100
+
 mint-configuration-kde (5.0.22) petra; urgency=low
 
   * Switch to folderview plugin

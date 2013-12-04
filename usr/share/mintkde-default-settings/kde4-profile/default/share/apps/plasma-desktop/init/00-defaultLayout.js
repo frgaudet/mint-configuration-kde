@@ -27,6 +27,7 @@ if (hasBattery) {
     systray.currentConfigGroup = new Array("Applets", ++i)
     systray.writeConfig("plugin", "battery")
 }
+
 systray.currentConfigGroup = new Array("Applets", ++i)
 systray.writeConfig("plugin", "message-indicator")
 systray.currentConfigGroup = new Array("Applets", ++i)
