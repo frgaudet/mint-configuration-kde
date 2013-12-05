@@ -6,7 +6,9 @@ if (panelIds.length == 1) {
 
 panel.height = 32
 launcher = panel.addWidget("launcher")
+launcher.writeConfig("ShowAppsByName","true")
 launcher.globalShortcut = "Alt+F1"
+
 panel.addWidget("showdesktop")
 var widget = panel.addWidget("icon")
 widget.writeConfig("Url", "file:///usr/share/applications/kde4/dolphin.desktop")

@@ -1,3 +1,9 @@
+mint-configuration-kde (5.0.25) petra; urgency=low
+
+  * Reorganize menu
+
+ -- Frédéric Gaudet <fred@linuxmint.com>  Thu, 05 Dec 2013 11:55:58 +0100
+
 mint-configuration-kde (5.0.24) petra; urgency=low
 
   * Switch to oxymentary theme
