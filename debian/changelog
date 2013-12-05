@@ -1,3 +1,9 @@
+mint-configuration-kde (5.0.26) petra; urgency=low
+
+  * Reove mintBackup from Settings menu category
+
+ -- Frédéric Gaudet <fred@linuxmint.com>  Thu, 05 Dec 2013 13:17:46 +0100
+
 mint-configuration-kde (5.0.25) petra; urgency=low
 
   * Reorganize menu

@@ -289,18 +289,25 @@ then
          /usr/share/applications/kde4/nepomukcleaner.desktop
 fi
 
-# Make mintnanny setup KDE compliant
+# Make mintnanny KDE compliant
 if [ -e /usr/share/applications/mintNanny.desktop ]
 then
   sed -i -e "s@^Categories=Application.*@Categories=Qt;KDE;Utility;@" \
          /usr/share/applications/mintNanny.desktop
 fi
 
-# Make mintupload setup KDE compliant
+# Make mintupload KDE compliant
 if [ -e /usr/share/applications/mintupload.desktop ]
 then
   sed -i -e "s@^Categories=Application.*@Categories=Qt;KDE;Utility;@" \
          /usr/share/applications/mintupload.desktop
+fi
+
+# Make mintbackup KDE compliant
+if [ -e /usr/share/applications/mintBackup.desktop ]
+then
+  sed -i -e "s@^Categories=Application.*@Categories=Qt;KDE;Utility;@" \
+         /usr/share/applications/mintBackup.desktop
 fi
 
 case "$1" in
