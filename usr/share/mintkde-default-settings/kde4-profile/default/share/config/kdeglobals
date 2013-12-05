@@ -115,3 +115,6 @@ activeFont=Droid Sans [unknown],10,-1,5,50,0,0,0,0,0
 inactiveBackground=224,223,222
 inactiveBlend=75,71,67
 inactiveForeground=20,19,18
+
+[Icons]
+Theme=oxymentary
