@@ -24,7 +24,7 @@ if (hasBattery) {
 systray.currentConfigGroup = new Array("Applets", ++i)
 systray.writeConfig("plugin", "message-indicator")
 systray.currentConfigGroup = new Array("Applets", ++i)
-systray.writeConfig("plugin", "org.kde.plasma-nm")
+systray.writeConfig("plugin", "org.kde.networkmanagement")
 systray.currentConfigGroup = new Array("Applets", ++i)
 systray.writeConfig("plugin", "notifier")
 
