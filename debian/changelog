@@ -1,3 +1,9 @@
+mint-configuration-kde (5.0.28) qiana; urgency=low
+
+  * Initial qiana release
+
+ -- Frédéric Gaudet <fred@linuxmint.com>  Fri, 04 Apr 2014 10:14:34 +0200
+
 mint-configuration-kde (5.0.27) petra; urgency=low
 
   * Fix startkde & fix network plasmoid
