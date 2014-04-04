@@ -19,6 +19,7 @@ interest /usr/share/applications/mdmsetup.desktop
 interest /usr/share/applications/im-config.desktop
 interest /usr/share/mintsources/olivia/icon.png
 interest /usr/share/mintsources/petra/icon.png
+interest /usr/share/mintsources/qiana/icon.png
 interest /usr/share/applications/mdmflexiserver.desktop
 interest /usr/share/applications/mintdrivers.desktop
 interest /usr/share/applications/mintsources.desktop
