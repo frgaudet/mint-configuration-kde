@@ -1,3 +1,9 @@
+mint-configuration-kde (5.0.29) qiana; urgency=low
+
+  * Update default wallpaper
+
+ -- Frédéric Gaudet <fred@linuxmint.com>  Wed, 14 May 2014 15:22:34 +0200
+
 mint-configuration-kde (5.0.28) qiana; urgency=low
 
   * Initial qiana release
