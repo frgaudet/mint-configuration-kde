@@ -33,4 +33,6 @@ interest /usr/share/applications/mintBackup.desktop
 interest /usr/bin/mintnanny
 interest /usr/bin/mintinstall
 interest /usr/bin/mintbackup
+interest /usr/share/themes/oxygen-gtk/gtk-2.0/gtkrc
+
 

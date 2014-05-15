@@ -1,3 +1,9 @@
+mint-configuration-kde (5.0.30) qiana; urgency=low
+
+  * Fix oxygen-gtk theme (issue with GTK2.0)
+
+ -- Frédéric Gaudet <fred@linuxmint.com>  Thu, 15 May 2014 12:50:33 +0200
+
 mint-configuration-kde (5.0.29) qiana; urgency=low
 
   * Update default wallpaper
