@@ -1,3 +1,9 @@
+mint-configuration-kde (5.0.31) qiana; urgency=low
+
+  * Remove returncode
+
+ -- Frédéric Gaudet <fred@linuxmint.com>  Fri, 16 May 2014 14:32:15 +0200
+
 mint-configuration-kde (5.0.30) qiana; urgency=low
 
   * Fix oxygen-gtk theme (issue with GTK2.0)

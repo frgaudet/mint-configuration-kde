@@ -16,21 +16,6 @@ if [ -z "$debian_chroot" ] && [ -r /etc/debian_chroot ]; then
 fi
 
 
-#------------------------------------------------------------------------------
-# Returncode.
-#------------------------------------------------------------------------------
-function returncode
-{
-  returncode=$?
-  if [ $returncode != 0 ]; then
-    echo "[$returncode]"
-  else
-    echo ""
-  fi
-}
-
-
-
 # set a fancy prompt (non-color, overwrite the one in /etc/profile)
 #PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 
@@ -69,9 +54,9 @@ if ${use_color} ; then
         #fi
 
         if [[ ${EUID} == 0 ]] ; then
-                PS1='\[\033[0;31m\]$(returncode)\[\033[0;37m\]\[\033[0;35m\]${debian_chroot:+($debian_chroot)}\[\033[01;31m\]\h\[\033[01;34m\] \W \$\[\033[00m\] '
+                PS1='\[\033[0;37m\]\[\033[0;35m\]${debian_chroot:+($debian_chroot)}\[\033[01;31m\]\h\[\033[01;34m\] \W \$\[\033[00m\] '
         else
-                PS1='\[\033[0;31m\]$(returncode)\[\033[0;37m\]\[\033[0;35m\]${debian_chroot:+($debian_chroot)}\[\033[0;35m\]\u@\h\[\033[0;37m\]:\[\033[0;36m\]\w >\[\033[0;00m\] '
+                PS1='\[\033[0;37m\]\[\033[0;35m\]${debian_chroot:+($debian_chroot)}\[\033[0;35m\]\u@\h\[\033[0;37m\]:\[\033[0;36m\]\w >\[\033[0;00m\] '
         fi
 
         alias ls='ls --color=auto'
