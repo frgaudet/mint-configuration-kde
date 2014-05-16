@@ -69,9 +69,9 @@ if ${use_color} ; then
 else
         if [[ ${EUID} == 0 ]] ; then
                 # show root@ when we don't have colors
-                PS1='\[$(returncode)\]\u@\h \W \$ '
+                PS1='\u@\h \W \$ '
         else
-                PS1='\[$(returncode)\]\u@\h \w \$ '
+                PS1='\u@\h \w \$ '
         fi
 fi
 
