@@ -1,3 +1,10 @@
+mint-configuration-kde (5.0.33) qiana; urgency=low
+
+  * [eea32ab] Hide Sieve Editor (could be retrieved via Kmail)
+  * [9fcf680] Add linuxmint-chat channel to konversation autologin
+
+ -- Frédéric Gaudet <fred@linuxmint.com>  Mon, 19 May 2014 13:16:45 +0200
+
 mint-configuration-kde (5.0.32) qiana; urgency=low
 
   * Remove returncode for UID 0
