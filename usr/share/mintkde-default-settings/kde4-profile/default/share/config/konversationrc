@@ -1,6 +1,10 @@
 [Channel 0]
 Name=#linuxmint-help
 
+[Channel 1]
+Name=#linuxmint-chat
+Password=
+
 [General Options]
 TrayNotify=true
 TrayNotifyOnlyOwnNick=true
@@ -14,7 +18,7 @@ Server=irc.spotchat.org
 Port=6667
 
 [ServerGroup 0]
-AutoJoinChannels=Channel 0
+AutoJoinChannels=Channel 0,Channel 1
 ServerList=Server 0
 Name=Linuxmint IRC
 
