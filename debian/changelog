@@ -1,3 +1,14 @@
+mint-configuration-kde (5.0.34) qiana; urgency=low
+
+  * [a72f743] Changelog
+  * [b20c555] No need do adjust mintdrivers desktop file anymore
+  * [ad1b5b8] No need do adjust mintbackup desktop file anymore
+  * [d0bbc41] No need do adjust mintNanny desktop file anymore
+  * [64948a2] No need do adjust mintsources desktop file anymore
+  * [ce952ba] Fix hiding desktop file
+
+ -- Frédéric Gaudet <fred@linuxmint.com>  Mon, 26 May 2014 13:47:19 +0200
+
 mint-configuration-kde (5.0.33) qiana; urgency=low
 
   * [eea32ab] Hide Sieve Editor (could be retrieved via Kmail)
