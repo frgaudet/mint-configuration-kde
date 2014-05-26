@@ -21,12 +21,10 @@ interest /usr/share/mintsources/olivia/icon.png
 interest /usr/share/mintsources/petra/icon.png
 interest /usr/share/mintsources/qiana/icon.png
 interest /usr/share/applications/mdmflexiserver.desktop
-interest /usr/share/applications/mintsources.desktop
 interest /usr/bin/driver-manager
 interest /usr/bin/software-sources
 interest /usr/share/applications/kde4/ktp-log-viewer.desktop
 interest /usr/share/applications/kde4/nepomukcleaner.desktop
-interest /usr/share/applications/mintupload.desktop
 interest /usr/bin/mintnanny
 interest /usr/bin/mintinstall
 interest /usr/bin/mintbackup

@@ -211,13 +211,6 @@ then
          /usr/share/mdm/applications/mdmflexiserver.desktop
 fi
 
-# Hide MintSources
-if [ -e /usr/share/applications/mintsources.desktop ]
-then
-  sed -i -e "/^\[Desktop Entry\]/a NoDisplay=true"  \
-         /usr/share/applications/mintsources.desktop
-fi
-
 # im-config
 if [ -e /usr/share/applications/im-config.desktop ]
 then
@@ -286,13 +279,6 @@ if [ -e /usr/share/applications/kde4/nepomukcleaner.desktop ]
 then
   sed -i -e "/^\[Desktop Entry\]/a NoDisplay=true" \
          /usr/share/applications/kde4/nepomukcleaner.desktop
-fi
-
-# Make mintupload KDE compliant
-if [ -e /usr/share/applications/mintupload.desktop ]
-then
-  sed -i -e "s@^Categories=Application.*@Categories=Qt;KDE;Utility;@" \
-         /usr/share/applications/mintupload.desktop
 fi
 
 if [ -e /usr/share/themes/oxygen-gtk/gtk-2.0/gtkrc ]
