@@ -302,13 +302,6 @@ then
          /usr/share/applications/mintupload.desktop
 fi
 
-# Make mintbackup KDE compliant
-if [ -e /usr/share/applications/mintBackup.desktop ]
-then
-  sed -i -e "s@^Categories=Application.*@Categories=Qt;KDE;Utility;@" \
-         /usr/share/applications/mintBackup.desktop
-fi
-
 if [ -e /usr/share/themes/oxygen-gtk/gtk-2.0/gtkrc ]
 then
   sed -i -e "s@GtkComboBox::appears-as-list = 1@GtkComboBox::appears-as-list = 0@"  \
