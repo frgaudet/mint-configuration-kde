@@ -288,13 +288,6 @@ then
          /usr/share/applications/kde4/nepomukcleaner.desktop
 fi
 
-# Make mintnanny KDE compliant
-if [ -e /usr/share/applications/mintNanny.desktop ]
-then
-  sed -i -e "s@^Categories=Application.*@Categories=Qt;KDE;Utility;@" \
-         /usr/share/applications/mintNanny.desktop
-fi
-
 # Make mintupload KDE compliant
 if [ -e /usr/share/applications/mintupload.desktop ]
 then

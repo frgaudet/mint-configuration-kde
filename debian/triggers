@@ -26,7 +26,6 @@ interest /usr/bin/driver-manager
 interest /usr/bin/software-sources
 interest /usr/share/applications/kde4/ktp-log-viewer.desktop
 interest /usr/share/applications/kde4/nepomukcleaner.desktop
-interest /usr/share/applications/mintNanny.desktop
 interest /usr/share/applications/mintupload.desktop
 interest /usr/bin/mintnanny
 interest /usr/bin/mintinstall
