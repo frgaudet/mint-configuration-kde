@@ -21,7 +21,6 @@ interest /usr/share/mintsources/olivia/icon.png
 interest /usr/share/mintsources/petra/icon.png
 interest /usr/share/mintsources/qiana/icon.png
 interest /usr/share/applications/mdmflexiserver.desktop
-interest /usr/share/applications/mintdrivers.desktop
 interest /usr/share/applications/mintsources.desktop
 interest /usr/bin/driver-manager
 interest /usr/bin/software-sources

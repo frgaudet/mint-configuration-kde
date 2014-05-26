@@ -211,13 +211,6 @@ then
          /usr/share/mdm/applications/mdmflexiserver.desktop
 fi
 
-# Hide Mintdriver
-if [ -e /usr/share/applications/mintdrivers.desktop ]
-then
-  sed -i -e "/^\[Desktop Entry\]/a NoDisplay=true"  \
-         /usr/share/applications/mintdrivers.desktop
-fi
-
 # Hide MintSources
 if [ -e /usr/share/applications/mintsources.desktop ]
 then
