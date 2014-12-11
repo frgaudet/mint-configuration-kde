@@ -1,17 +1,14 @@
-mint-configuration-kde (5.0.36) rebecca; urgency=medium
+mint-configuration-kde (5.0.36) qiana; urgency=medium
 
-  * New checkout :
-  * [72b8ef4] Rename default background
+  * Refined default GTK configuration
 
- -- Frédéric Gaudet <fred@linuxmint.com>  Thu, 11 Dec 2014 10:40:10 +0100
+ -- Clement Lefebvre <root@linuxmint.com>  Wed, 18 Jun 2014 13:33:09 +0100
 
-mint-configuration-kde (5.0.35) rebecca; urgency=low
+mint-configuration-kde (5.0.35) qiana; urgency=medium
 
-  * New checkout :
-  * [44feec3] Set Rebecca default backgrounds
-  * [7d40405] New version
+  * Switched default fonts to Dejavu Sans 9
 
- -- Frédéric Gaudet <fred@linuxmint.com>  Thu, 11 Dec 2014 09:55:34 +0100
+ -- Clement Lefebvre <root@linuxmint.com>  Wed, 18 Jun 2014 12:42:56 +0100
 
 mint-configuration-kde (5.0.34) qiana; urgency=low
 
