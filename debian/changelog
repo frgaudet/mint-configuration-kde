@@ -1,3 +1,10 @@
+mint-configuration-kde (5.0.36) rebecca; urgency=medium
+
+  * New checkout :
+  * [72b8ef4] Rename default background
+
+ -- Frédéric Gaudet <fred@linuxmint.com>  Thu, 11 Dec 2014 10:40:10 +0100
+
 mint-configuration-kde (5.0.35) rebecca; urgency=low
 
   * New checkout :
