@@ -92,15 +92,18 @@ ForegroundPositive=0,110,40
 ForegroundVisited=69,40,134
 
 [General]
+XftAntialias=true
+XftHintStyle=hintslight
+XftSubPixel=rgb
 ColorScheme=Oxygen Cold
 shadeSortColumn=true
-desktopFont=Liberation Sans,10,-1,5,50,0,0,0,0,0
+desktopFont=DejaVu Sans,9,-1,5,50,0,0,0,0,0
 fixed=Monospace,9,-1,5,50,0,0,0,0,0
-font=Liberation Sans,10,-1,5,50,0,0,0,0,0
-menuFont=Liberation Sans,10,-1,5,50,0,0,0,0,0
-smallestReadableFont=Liberation Sans,9,-1,5,50,0,0,0,0,0
-taskbarFont=Liberation Sans,10,-1,5,50,0,0,0,0,0
-toolBarFont=Liberation Sans,10,-1,5,50,0,0,0,0,0
+font=DejaVu Sans,9,-1,5,50,0,0,0,0,0
+menuFont=DejaVu Sans,9,-1,5,50,0,0,0,0,0
+smallestReadableFont=DejaVu Sans,9,-1,5,50,0,0,0,0,0
+taskbarFont=DejaVu Sans,9,-1,5,50,0,0,0,0,0
+toolBarFont=DejaVu Sans,9,-1,5,50,0,0,0,0,0
 
 [KDE]
 contrast=7
@@ -111,7 +114,7 @@ ShowDeleteCommand=true
 activeBackground=96,148,207
 activeBlend=255,255,255
 activeForeground=255,255,255
-activeFont=Droid Sans [unknown],10,-1,5,50,0,0,0,0,0
+activeFont=DejaVu Sans,9,-1,5,50,0,0,0,0,0
 inactiveBackground=224,223,222
 inactiveBlend=75,71,67
 inactiveForeground=20,19,18
