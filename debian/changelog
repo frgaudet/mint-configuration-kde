@@ -1,3 +1,11 @@
+mint-configuration-kde (5.0.38) rebecca; urgency=medium
+
+  * New checkout :
+  * [c17ef7c] Hide PIM Settings exporter
+  * [667e5fe] Changelog
+
+ -- Frédéric Gaudet <fred@linuxmint.com>  Thu, 11 Dec 2014 15:51:04 +0100
+
 mint-configuration-kde (5.0.37) rebecca; urgency=medium
 
   * [0113d8a] Rename default background
