@@ -1,3 +1,9 @@
+mint-configuration-kde (5.0.37) rebecca; urgency=medium
+
+  * [0113d8a] Rename default background
+
+ -- Frédéric Gaudet <fred@linuxmint.com>  Thu, 11 Dec 2014 13:03:30 +0100
+
 mint-configuration-kde (5.0.36) qiana; urgency=medium
 
   * Refined default GTK configuration
