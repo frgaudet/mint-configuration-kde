@@ -3,7 +3,7 @@ activity.name = i18n("Desktop")
 activity.wallpaperPlugin = "image"
 activity.wallpaperMode = "SingleImage"
 activity.currentConfigGroup = Array("Wallpaper", "image")
-activity.writeConfig("wallpaper", "/usr/share/wallpapers/Linux_blue_17.1")
+activity.writeConfig("wallpaper", "/usr/share/wallpapers/Linux_Mint")
 activity.writeConfig("wallpaperposition", "2")
 
 activity.currentConfigGroup = new Array('ToolBox')

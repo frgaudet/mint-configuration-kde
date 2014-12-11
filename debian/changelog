@@ -1,3 +1,11 @@
+mint-configuration-kde (5.0.35) rebecca; urgency=low
+
+  * New checkout :
+  * [44feec3] Set Rebecca default backgrounds
+  * [7d40405] New version
+
+ -- Frédéric Gaudet <fred@linuxmint.com>  Thu, 11 Dec 2014 09:55:34 +0100
+
 mint-configuration-kde (5.0.34) qiana; urgency=low
 
   * [a72f743] Changelog
