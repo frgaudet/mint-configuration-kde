@@ -1,3 +1,9 @@
+mint-configuration-kde (5.0.39) rebecca; urgency=medium
+
+  * Updated startkde (adds kwallet support and qdbus fixes)
+
+ -- Clement Lefebvre <root@linuxmint.com>  Thu, 11 Dec 2014 21:57:53 +0000
+
 mint-configuration-kde (5.0.38) rebecca; urgency=medium
 
   * New checkout :
