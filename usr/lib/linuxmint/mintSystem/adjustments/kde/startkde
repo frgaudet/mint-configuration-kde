@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-#  DEFAULT KDE STARTUP SCRIPT ( 4.11.2 )
+#  DEFAULT KDE STARTUP SCRIPT ( 4.11.11 )
 #
 
 if test "x$1" = x--failsafe; then
@@ -16,18 +16,7 @@ trap 'echo GOT SIGHUP' HUP
 # we have to unset this for Darwin since it will screw up KDE's dynamic-loading
 unset DYLD_FORCE_FLAT_NAMESPACE
 
-# in case we have been started with full pathname spec without being in PATH
-bindir=`echo "$0" | sed -n 's,^\(/.*\)/[^/][^/]*$,\1,p'`
-if [ -n "$bindir" ]; then
-  qbindir=`$bindir/kde4-config --qt-binaries`
-  qdbus=$qbindir/qdbus
-  case $PATH in
-    $bindir|$bindir:*|*:$bindir|*:$bindir:*) ;;
-    *) PATH=$bindir:$PATH; export PATH;;
-  esac
-else
-  qdbus=qdbus
-fi
+alias qdbus="QT_SELECT=qt4 qdbus"
 
 # Check if a KDE session already is running and whether it's possible to connect to X
 kcheckrunning
@@ -148,7 +137,8 @@ is_package_installed() {
   fi
 }
 
-if is_package_installed mint-configuration-kde && (is_package_installed gtk2-engines-oxygen || is_package_installed gtk3-engines-oxygen); then
+if (is_package_installed mint-configuration-kde) && \
+ (is_package_installed gtk2-engines-oxygen || is_package_installed gtk3-engines-oxygen); then
   # The theme and k-d-s are installed, configuring...
   if [ ! -e $HOME/.gtkrc-2.0 ]; then
     if [ -e /usr/share/mintkde-default-settings/dot-gtkrc-2.0-kde4 ] ; then
@@ -172,7 +162,7 @@ fi
 # In Kubuntu start plasma-netbook if the screen is small or if "netbook" parameter were passed to startkde.
 if [ -e /usr/share/kubuntu-netbook-default-settings/share/autostart/plasma-netbook.desktop ] ; then
   HEIGHT=`xdpyinfo | grep dimensions | awk '{print $2}' | sed s,.*x,,`
-  CDROM=`udisks --dump | grep optical_cd`
+  CDROM=`udisksctl dump | grep optical_cd`
   if `laptop-detect` && [ $HEIGHT -lt 700 ] && [ $HEIGHT -gt 0 ] && [ -z "$CDROM" ] || [ "$1" = "netbook" ]; then
     if [ ! -e ~/.config/autostart/plasma-netbook.desktop ] || grep -q Hidden=false ~/.config/autostart/plasma-netbook.desktop; then
       echo Small screen resolution detected, using plasma-netbook;
@@ -324,7 +314,7 @@ export XDG_DATA_DIRS
 if test -z "$DBUS_SESSION_BUS_ADDRESS" ; then
     eval `dbus-launch --sh-syntax --exit-with-session`
 fi
-if $qdbus >/dev/null 2>/dev/null; then
+if qdbus >/dev/null 2>/dev/null; then
     : # ok
 else
     echo 'startkde: Could not start D-Bus. Can you call qdbus?'  1>&2
@@ -388,6 +378,11 @@ export KDE_SESSION_UID
 XDG_CURRENT_DESKTOP=KDE
 export XDG_CURRENT_DESKTOP
 
+# At this point all the environment is ready, let's send it to kwalletd if running
+if test -n "$PAM_KWALLET_LOGIN" ; then
+    env | socat STDIN UNIX-CONNECT:$PAM_KWALLET_LOGIN
+fi
+
 # We set LD_BIND_NOW to increase the efficiency of kdeinit.
 # kdeinit unsets this variable before loading applications.
 LD_BIND_NOW=true /usr/lib/kde4/libexec/start_kdeinit_wrapper +kcminit_startup
@@ -428,13 +423,13 @@ if test x"$wait_drkonqi"x = x"true"x ; then
     # wait for remaining drkonqi instances with timeout (in seconds)
     wait_drkonqi_timeout=`kreadconfig --file startkderc --group WaitForDrKonqi --key Timeout --default 900`
     wait_drkonqi_counter=0
-    while $qdbus | grep "^[^w]*org.kde.drkonqi" > /dev/null ; do
+    while qdbus | grep "^[^w]*org.kde.drkonqi" > /dev/null ; do
         sleep 5
         wait_drkonqi_counter=$((wait_drkonqi_counter+5))
         if test "$wait_drkonqi_counter" -ge "$wait_drkonqi_timeout" ; then
             # ask remaining drkonqis to die in a graceful way
-            $qdbus | grep 'org.kde.drkonqi-' | while read address ; do
-                $qdbus "$address" "/MainApplication" "quit"
+            qdbus | grep 'org.kde.drkonqi-' | while read address ; do
+                qdbus "$address" "/MainApplication" "quit"
             done
             break
         fi
