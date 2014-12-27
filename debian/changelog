@@ -1,3 +1,9 @@
+mint-configuration-kde (5.0.40) rebecca; urgency=medium
+
+  * [ece10da] Switch to Noto font family
+
+ -- Frédéric Gaudet <fred@linuxmint.com>  Sat, 27 Dec 2014 09:26:02 +0100
+
 mint-configuration-kde (5.0.39) rebecca; urgency=medium
 
   * Updated startkde (adds kwallet support and qdbus fixes)
