@@ -1,3 +1,11 @@
+mint-configuration-kde (5.0.41-Oiut0) rebecca; urgency=medium
+
+  * New checkout :
+  * [3968aca] Change default background
+  * [1be74f8] Switch to Noto font family
+
+ -- Frédéric Gaudet <fred@linuxmint.com>  Thu, 21 May 2015 09:48:32 +0200
+
 mint-configuration-kde (5.0.40) rebecca; urgency=medium
 
   * [ece10da] Switch to Noto font family
